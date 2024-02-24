@@ -13,12 +13,21 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20.11.1
+          node-version: 20.11.1  # Use your specific Node.js version
 
       - name: Install dependencies
         run: npm install
-        
-      - name: trying to run node app.js
-        run: node app.js
 
-      
+      - name: Build the application (optional)
+        # Add steps to build your app, e.g., npm run build
+        # Assuming you build your app in the public folder:
+        run: cd public && npm run build  # Replace with your build command
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          github-token: ${{ secrets.GB_TOKEN }}
+          local-dir: public  # Assuming your built files are in public
+          enable-private-pages: true  # If you need private pages
+          target-branch: gh-pages  # Or a different branch for deployment
+
