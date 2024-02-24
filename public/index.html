@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="signature-container">
+        <h1>Get Your Signature</h1>
+        <div class="signature-options">
+            <label for="signatureText">Enter your name:</label>
+            <input type="text" id="signatureText" placeholder="Enter your name">
+            
+            <label for="fontSelect">Select font:</label>
+            <select id="fontSelect">
+                <option value="Arial">Arial</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Brush Script MT">Brush Script MT</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Lucida Handwriting">Lucida Handwriting</option>
+                <option value="Segoe Script">Segoe Script</option>
+                <option value="Mistral">Mistral</option>
+                <option value="Snell Roundhand">Snell Roundhand</option>
+                <option value="Corsiva">Corsiva</option>
+                <option value="Apple Chancery">Apple Chancery</option>
+                <option value="Monotype Corsiva">Monotype Corsiva</option>
+                <option value="Freestyle Script">Freestyle Script</option>
+                <!-- Add more font options as needed -->
+            </select>
+            
+            <label for="fontColorPicker">Font color:</label>
+            <input type="color" id="fontColorPicker" value="#000000">
+            
+            <label for="fontSizeInput">Font size:</label>
+            <input type="number" id="fontSizeInput" value="20">
+            
+            <label for="backgroundColorPicker">Background color:</label>
+            <input type="color" id="backgroundColorPicker" value="#ffffff">
+            
+            <button onclick="generateSignature()">Generate Signature</button>
+            <canvas id="signatureCanvas" width="400" height="200"></canvas>
+            <button onclick="clearCanvas()">Clear</button>
+            <button onclick="downloadSignature()">Download Signature</button>
+        </div>
+    </div>
+    
+   
+
+    <script src="script.js"></script>
+</body>
+</html>

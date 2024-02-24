@@ -1,0 +1,94 @@
+/* Reset default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f7f4; /* Sea foam background color */
+}
+
+.signature-container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: left;
+    background-color: #b0c5c1; /* Dusty blue container color */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.signature-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #6a7f8d; /* Slate color for labels */
+}
+
+input[type="text"],
+select,
+input[type="number"],
+input[type="color"],
+button {
+    width: auto;
+    padding: 10px;
+    border: 1px solid #2e6d70; /* Dusty blue color for borders */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px;
+}
+
+/* Adjusted font color picker size */
+input[type="color"] {
+    width: calc(40% - 16px); /* Adjust the width here */
+    height: 40px; /* Add height here */
+}
+
+/* Adjusted placeholder alignment */
+::placeholder {
+    text-align: center;
+}
+
+button {
+    background-color: #1d4d4f; /* Darker shade of dusty blue for button */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+button:hover {
+    background-color: #0e2f30; /* Even darker shade of dusty blue on hover */
+}
+
+canvas {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #2e6d70; /* Dusty blue color for borders */
+    border-radius: 15px; /* Rounded corners */
+    box-sizing: border-box;
+    margin-top: 15px;
+    padding: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .signature-container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signature-container {
+        max-width: 90%;
+    }
+}
