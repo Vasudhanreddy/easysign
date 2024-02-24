@@ -17,5 +17,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        
+      - name: trying to run node app.js
+        run: node app.js
 
       
